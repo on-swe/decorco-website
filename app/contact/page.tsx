@@ -80,7 +80,7 @@ export default function ContactPage() {
                         setFormData({ ...formData, name: e.target.value })
                       }
                       required
-                      className="w-full bg-white text-black rounded-none"
+                      className="w-full bg-white text-black rounded-none border border-[#e5e5e5]"
                     />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                         setFormData({ ...formData, email: e.target.value })
                       }
                       required
-                      className="w-full bg-white text-black rounded-none"
+                      className="w-full bg-white text-black rounded-none border border-[#e5e5e5]"
                     />
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full bg-white text-black rounded-none"
+                      className="w-full bg-white text-black rounded-none border border-[#e5e5e5]"
                     />
                   </div>
                   <div>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                         setFormData({ ...formData, inquiryType: value })
                       }
                     >
-                      <SelectTrigger className="w-full bg-white text-black rounded-none">
+                      <SelectTrigger className="w-full bg-white text-black rounded-none border border-[#e5e5e5]">
                         <SelectValue placeholder="Select service type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -133,7 +133,10 @@ export default function ContactPage() {
                         >
                           Interior Design
                         </SelectItem>
-                        <SelectItem value="renovation" className="text-black rounded-none bg-white">
+                        <SelectItem
+                          value="renovation"
+                          className="text-black rounded-none bg-white"
+                        >
                           Renovation Services
                         </SelectItem>
                         <SelectItem
@@ -154,7 +157,10 @@ export default function ContactPage() {
                         >
                           Project Management
                         </SelectItem>
-                        <SelectItem value="other" className="text-black rounded-none bg-white">
+                        <SelectItem
+                          value="other"
+                          className="text-black rounded-none bg-white"
+                        >
                           Other Services
                         </SelectItem>
                       </SelectContent>
@@ -172,7 +178,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full bg-white text-black rounded-none"
+                    className="w-full bg-white text-black rounded-none border border-[#e5e5e5]"
                   />
                 </div>
 
@@ -188,7 +194,7 @@ export default function ContactPage() {
                     }
                     placeholder="Tell us about your real estate needs..."
                     required
-                    className="w-full bg-white text-black"
+                    className="w-full bg-white text-black rounded-none border border-[#e5e5e5]"
                   />
                 </div>
 
