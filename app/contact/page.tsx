@@ -44,7 +44,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[#1a1a1a]">
       {/* Header */}
       <section className="relative bg-[#1a1a1a] min-h-[60vh] items-center justify-center flex overflow-x-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
@@ -64,11 +64,13 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white border border-gray-200 p-8">
-              <h2 className="leading-[4rem] text-[4rem] font-thin font-wegato mb-6">Send us a Message</h2>
+              <h2 className="leading-[4rem] text-[4rem] font-thin font-wegato mb-6 text-black">
+                Send us a Message
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-black">
                       Name *
                     </label>
                     <Input
@@ -78,11 +80,11 @@ export default function ContactPage() {
                         setFormData({ ...formData, name: e.target.value })
                       }
                       required
-                      className="w-full"
+                      className="w-full bg-white text-black rounded-none"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-black">
                       Email *
                     </label>
                     <Input
@@ -92,14 +94,14 @@ export default function ContactPage() {
                         setFormData({ ...formData, email: e.target.value })
                       }
                       required
-                      className="w-full"
+                      className="w-full bg-white text-black rounded-none"
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-black">
                       Phone
                     </label>
                     <Input
@@ -108,11 +110,11 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full"
+                      className="w-full bg-white text-black rounded-none"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label className="block text-sm font-medium mb-2 text-black">
                       Inquiry Type
                     </label>
                     <Select
@@ -121,31 +123,47 @@ export default function ContactPage() {
                         setFormData({ ...formData, inquiryType: value })
                       }
                     >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select inquiry type" />
+                      <SelectTrigger className="w-full bg-white text-black rounded-none">
+                        <SelectValue placeholder="Select service type" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="buying">
-                          Buying a Property
+                        <SelectItem
+                          value="interior-design"
+                          className="text-black rounded-none bg-white"
+                        >
+                          Interior Design
                         </SelectItem>
-                        <SelectItem value="selling">
-                          Selling a Property
+                        <SelectItem value="renovation" className="text-black rounded-none bg-white">
+                          Renovation Services
                         </SelectItem>
-                        <SelectItem value="renting">Renting</SelectItem>
-                        <SelectItem value="investment">
-                          Investment Consulting
+                        <SelectItem
+                          value="custom-furniture"
+                          className="text-black rounded-none bg-white"
+                        >
+                          Custom Furniture
                         </SelectItem>
-                        <SelectItem value="valuation">
-                          Property Valuation
+                        <SelectItem
+                          value="3d-visualization"
+                          className="text-black rounded-none bg-white"
+                        >
+                          3D Visualization
                         </SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectItem
+                          value="project-management"
+                          className="text-black rounded-none bg-white"
+                        >
+                          Project Management
+                        </SelectItem>
+                        <SelectItem value="other" className="text-black rounded-none bg-white">
+                          Other Services
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-sm font-medium mb-2 text-black">
                     Subject
                   </label>
                   <Input
@@ -154,12 +172,12 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className="w-full"
+                    className="w-full bg-white text-black rounded-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label className="block text-sm font-medium mb-2 text-black">
                     Message *
                   </label>
                   <Textarea
@@ -170,7 +188,7 @@ export default function ContactPage() {
                     }
                     placeholder="Tell us about your real estate needs..."
                     required
-                    className="w-full"
+                    className="w-full bg-white text-black"
                   />
                 </div>
 
@@ -189,7 +207,9 @@ export default function ContactPage() {
           <div className="space-y-8">
             {/* Contact Details */}
             <div className="bg-gray-50 p-6">
-              <h3 className="text-[3rem] font-wegato font-thin mb-6">Get in Touch</h3>
+              <h3 className="text-[3rem] font-wegato font-thin mb-6">
+                Get in Touch
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-gray-600 mt-0.5" />
@@ -236,7 +256,9 @@ export default function ContactPage() {
             <div className="relative bg-[#1a1a1a] text-white p-6 border border-white rounded-none ">
               <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-              <h3 className="text-[3rem] font-wegato font-thin">Stay Updated</h3>
+              <h3 className="text-[3rem] font-wegato font-thin">
+                Stay Updated
+              </h3>
               <p className="text-gray-300 mb-8">
                 Subscribe to our newsletter for market updates and exclusive
                 listings.
@@ -263,12 +285,13 @@ export default function ContactPage() {
 
         {/* Google Maps */}
         <section className="mt-16">
-          <h2 className="text-[4rem] font-wegato font-thin mb-6 text-white">Visit Our Office</h2>
+          <h2 className="text-[4rem] font-wegato font-thin mb-6 text-white">
+            Visit Our Office
+          </h2>
           <div className="bg-gray-100 h-96">
             <MapComponent />
           </div>
         </section>
-
       </div>
     </div>
   );
