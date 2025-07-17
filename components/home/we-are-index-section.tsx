@@ -47,6 +47,12 @@ export function WeAreIndexSection() {
     );
   };
 
+  const goToSlide = (index: number) => {
+    if (isTransitioning || index === currentIndex) return;
+    setIsTransitioning(true);
+    setCurrentIndex(index);
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsTransitioning(false);
@@ -56,9 +62,9 @@ export function WeAreIndexSection() {
 
   return (
     <section className="pb-[12rem] pt-[6rem] px-[2rem] bg-primary-dark text-text-light overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto sm:px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12">
-        <ScrollReveal delay={0.2} xOffset={-50}>
+          <ScrollReveal delay={0.2} xOffset={-50}>
             <h2 className=" leading-[3.5rem] text-[5rem] md:leading-[6rem] font-wegato">We Are</h2>
           </ScrollReveal>
           <div className="flex-grow border-t border-gray-700 mx-8 hidden md:block" />
@@ -108,12 +114,7 @@ export function WeAreIndexSection() {
                         ? "ring-2 ring-white scale-105"
                         : "opacity-70 hover:opacity-90"
                     }`}
-                    onClick={() => {
-                      if (!isTransitioning) {
-                        setIsTransitioning(true);
-                        setCurrentIndex(index);
-                      }
-                    }}
+                    onClick={() => goToSlide(index)}
                   >
                     <ScrollReveal delay={0.5 + index * 0.1} yOffset={30}>
                       <Image
@@ -164,7 +165,6 @@ export function WeAreIndexSection() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>

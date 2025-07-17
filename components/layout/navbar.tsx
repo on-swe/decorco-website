@@ -18,7 +18,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-12">
-      <nav className="flex items-center justify-between max-w-7xl mx-auto py-4 px-8 border-b border-text-[#f5f5f5]">
+      <nav className="flex items-center justify-between max-w-7xl mx-auto py-4 px-8 border-b border-[#f5f5f5]">
         <Link href="/" className=" text-text-light  text-[2rem] font-black font-['wegato']" prefetch={false}>
           DecorCo
         </Link>

@@ -80,7 +80,7 @@ export default function AboutPage() {
       <div className="relative h-[80vh] min-h-[600px] flex items-center">
         <div className="absolute inset-0 bg-black/30 z-10"></div>
         <Image
-          src="/images/about/bg.jpg"
+          src="/images/about/bg.webp"
           alt="Luxury interior"
           fill
           className="object-cover"
@@ -227,7 +227,7 @@ export default function AboutPage() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-[#1a1a1a] text-white py-28">
+      <section className="bg-[#1a1a1a] text-white py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal delay={0.2}>
             <div className="text-center mb-20">

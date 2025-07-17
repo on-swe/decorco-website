@@ -29,7 +29,7 @@ export default function ProjectsPage() {
       <div className="relative h-[60vh] min-h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/30 z-10"></div>
         <Image
-          src="/images/about/bg.jpg"
+          src="/images/about/bg.webp"
           alt="Luxury interior projects"
           fill
           className="object-cover"

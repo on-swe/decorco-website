@@ -5,8 +5,8 @@ import CircularText from "../imported/circular-text/circular-text";
 
 export function VisionSection() {
   return (
-    <section className="py-[6rem] sm:py-[8rem] md:py-[10rem] lg:py-[12rem] px-8 bg-primary-dark text-text-light overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-[6rem] sm:py-[8rem] md:py-[10rem] lg:py-[12rem] px-8 bg-primary-dark text-text-light overflow-hidden">
+      <div className="max-w-7xl mx-auto sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <ScrollReveal delay={0.1}>
             <div className="flex items-center gap-1">

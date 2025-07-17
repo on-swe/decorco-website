@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${wegato.variable} font-wegato`} suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfairDisplay.variable} font-sans`}>
+      <body className={`${inter.variable} ${playfairDisplay.variable} font-sans overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
           <main className="min-h-screen">{children}</main>

@@ -7,7 +7,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/30 z-10"></div>
 
       <Image
-        src="/images/about/bg.jpg?height=1080&width=1920"
+        src="/images/about/bg.webp?height=1080&width=1920"
         alt="Modern living room interior design"
         fill
         className="object-cover object-center "
