@@ -213,7 +213,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             {/* Contact Details */}
             <div className="bg-gray-50 p-6">
-              <h3 className="text-[3rem] font-wegato font-thin mb-6">
+              <h3 className="text-black text-[3rem] font-wegato font-thin mb-6">
                 Get in Touch
               </h3>
               <div className="space-y-4">

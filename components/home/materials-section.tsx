@@ -25,7 +25,7 @@ export function MaterialsSection() {
             <ScrollReveal delay={0.3} xOffset={-50} className="flex-1">
               <div className="h-full relative min-h-[250px] sm:min-h-[300px]">
                 <Image
-                  src="/images/home/reviews-section/img-1.jpg?height=400&width=600"
+                  src="/images/home/reviews-section/img-1.webp?height=400&width=600"
                   alt="Construction worker on site"
                   fill
                   className="object-cover lg:mt-[4rem] max-h-[312px]"
@@ -40,7 +40,7 @@ export function MaterialsSection() {
             <ScrollReveal delay={0.5} xOffset={-50} className="h-full">
               <div className="h-full relative min-h-[250px] sm:min-h-[350px] lg:min-h-full lg:mt-[2rem]">
                 <Image
-                  src="/images/home/reviews-section/img-2.jpg?height=600&width=400"
+                  src="/images/home/reviews-section/img-2.webp?height=600&width=400"
                   alt="Elegant mirror detail"
                   fill
                   className="object-cover shadow-lg"
@@ -55,7 +55,7 @@ export function MaterialsSection() {
             <ScrollReveal delay={0.7} xOffset={-50} className="flex-1">
               <div className="h-full relative min-h-[250px] sm:min-h-[300px]">
                 <Image
-                  src="/images/home/reviews-section/img-3.jpg?height=400&width=600"
+                  src="/images/home/reviews-section/img-3.webp?height=400&width=600"
                   alt="Designer working on plans"
                   fill
                   className="object-cover max-h-[312px]"
