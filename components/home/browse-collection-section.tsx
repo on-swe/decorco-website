@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function BrowseCollectionSection() {
   return (
@@ -10,7 +10,9 @@ export function BrowseCollectionSection() {
 
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
         <ScrollReveal delay={0.2}>
-          <h2 className="text-[10rem] leading-[10rem] font-wegato mb-6">Browse Our Collection</h2>
+          <h2 className="text-[3.5rem] leading-[3.5rem] xs:text-[4.5rem] xs:leading-[4.5rem] sm:text-[6rem] sm:leading-[6rem] md:text-[8rem] md:leading-[8rem] lg:text-[9rem] lg:leading-[9rem] xl:text-[10rem] xl:leading-[10rem] font-wegato mb-4 sm:mb-6">
+            Browse Our <br /> Collection
+          </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.6}>
           <Button
@@ -24,5 +26,5 @@ export function BrowseCollectionSection() {
         </ScrollReveal>
       </div>
     </section>
-  )
+  );
 }

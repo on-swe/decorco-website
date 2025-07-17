@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Decorco is a leading interior design company that provides a wide range of services to clients.",
   generator: "Raqeem - رَقيم ",
   icons: {
-    icon: "./images/logo/logo.png",
+    icon: "/images/logo/icon.png",
   },
 };
 

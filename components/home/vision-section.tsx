@@ -5,7 +5,7 @@ import CircularText from "../imported/circular-text/circular-text";
 
 export function VisionSection() {
   return (
-    <section className="py-[12rem] px-8 bg-primary-dark text-text-light">
+    <section className="py-[6rem] sm:py-[8rem] md:py-[10rem] lg:py-[12rem] px-8 bg-primary-dark text-text-light overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <ScrollReveal delay={0.1}>
@@ -17,7 +17,7 @@ export function VisionSection() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-wegato leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] leading-[1.2] sm:leading-[1.3] md:leading-[1.4] lg:leading-[5rem] font-wegato mb-6 sm:mb-8 md:mb-10 lg:mb-12">
               Bringing Vision and Expertise to Every Project
             </h2>
           </ScrollReveal>
@@ -53,16 +53,16 @@ export function VisionSection() {
               alt="Modern hanging lamp"
               width={400}
               height={600}
-              className="w-full h-full object-cover shadow-lg"
+              className="w-full h-full object-cover shadow-lg min-h-[30rem]"
             />
           </ScrollReveal>
           <ScrollReveal delay={0.5} xOffset={50}>
             <Image
-              src="/istockphoto-1135800302-612x612.jpg?height=400&width=600"
+              src="/images/home/vision-section/img-2.jpg?height=400&width=600"
               alt="Bright interior space"
               width={600}
               height={400}
-              className="w-full h-full object-cover shadow-lg mt-12"
+              className="w-full h-full object-cover shadow-lg min-h-[30rem] mt-12"
             />
           </ScrollReveal>
         </div>

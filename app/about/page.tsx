@@ -1,6 +1,5 @@
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
 import { CheckCircle, Award, Lightbulb, Palette, Layout } from "lucide-react";
 
 export default function AboutPage() {
@@ -165,7 +164,7 @@ export default function AboutPage() {
               <p className="text-sm uppercase tracking-widest text-accent-gold mb-4">
                 The Visionaries
               </p>
-              <h2 className="text-white text-[5rem] font-wegato font-light tracking-tight">
+              <h2 className="text-white text-[4rem] leading-[5rem] sm:text-[5rem] sm:leading-[5rem] font-wegato font-light tracking-tight">
                 Meet Our <span className="font-medium">Founders</span>
               </h2>
             </div>
@@ -205,7 +204,7 @@ export default function AboutPage() {
             <p className="text-sm uppercase tracking-widest text-accent-gold">
               Our Methodology
             </p>
-            <h2 className="text-[5rem] font-wegato font-thin tracking-tight">
+            <h2 className="text-[4rem] leading-[5rem] sm:text-[5rem] font-wegato font-thin tracking-tight">
               The DecorCo <span className="font-medium">Process</span>
             </h2>
           </div>
@@ -235,7 +234,7 @@ export default function AboutPage() {
               <p className="text-sm uppercase tracking-widest text-accent-gold">
                 Our Expertise
               </p>
-              <h2 className="text-[5rem] font-thing font-wegato tracking-tight text-white">
+              <h2 className="text-[4rem] leading-[5rem] sm:text-[5rem] font-thing font-wegato tracking-tight text-white">
                 Comprehensive <span className="font-medium">Services</span>
               </h2>
             </div>
@@ -262,7 +261,7 @@ export default function AboutPage() {
             <p className="text-sm uppercase tracking-widest text-accent-gold">
               Accolades
             </p>
-            <h2 className="text-[5rem] font-wegato font-light">
+            <h2 className="text-[4rem] leading-[5rem] sm:text-[5rem] font-wegato font-light">
               Recognition & <span className="font-medium">Awards</span>
             </h2>
           </div>

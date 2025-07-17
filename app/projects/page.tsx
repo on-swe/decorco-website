@@ -8,154 +8,13 @@ import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronRight, Star } from "lucide-react";
 import { CustomerReviewsSection } from "@/components/home/customer-reviews-section";
+import { projectsPageData } from "@/mock/projects";
 
-const projectsData = [
-  {
-    slug: "modern-city-apartment",
-    title: "Modern City Apartment",
-    description:
-      "A sleek and sophisticated urban living space designed for comfort and style.",
-    image:
-      "/pexels-allen-boguslavsky-1344061-32921675.jpg?height=400&width=600",
-    category: "Residential",
-    type: "New Designs",
-    inspiration:
-      "Inspired by minimalist Scandinavian aesthetics and the vibrant energy of urban living.",
-    comments: [
-      {
-        author: "Client A",
-        text: "Absolutely love our new apartment! It feels so spacious and modern.",
-        rating: 5,
-      },
-      {
-        author: "Design Enthusiast",
-        text: "The use of light and texture is simply brilliant.",
-        rating: 4,
-      },
-    ],
-  },
-  {
-    slug: "coastal-villa-retreat",
-    title: "Coastal Villa Retreat",
-    description:
-      "Bringing the serenity of the ocean indoors with natural textures and light.",
-    image: "/full_1.webp?height=400&width=600",
-    category: "Residential",
-    type: "Old Designs",
-    inspiration:
-      "Drawing from the serene beauty of the Mediterranean coast and natural elements.",
-    comments: [
-      {
-        author: "Client B",
-        text: "Our dream home! Every detail reflects the tranquility we desired.",
-        rating: 5,
-      },
-      {
-        author: "Travel Blogger",
-        text: "This villa is a true masterpiece of coastal living.",
-        rating: 5,
-      },
-    ],
-  },
-  {
-    slug: "boutique-hotel-lobby",
-    title: "Boutique Hotel Lobby",
-    description:
-      "Creating an inviting and luxurious first impression for a high-end hotel.",
-    image: "/feature.jpg?height=400&width=600",
-    category: "Commercial",
-    type: "New Designs",
-    inspiration:
-      "A fusion of classic Parisian elegance and contemporary art deco influences.",
-    comments: [
-      {
-        author: "Hotel Manager",
-        text: "Our guests are constantly complimenting the stunning lobby.",
-        rating: 5,
-      },
-      {
-        author: "Architect",
-        text: "The grandeur and attention to detail are truly impressive.",
-        rating: 4,
-      },
-    ],
-  },
-  {
-    slug: "minimalist-office-space",
-    title: "Minimalist Office Space",
-    description:
-      "A functional and aesthetically pleasing environment promoting productivity.",
-    image:
-      "/full_SC007_ACTIU_HOSPITALITY_AGO022__SALA_HOME_2.webp?height=400&width=600",
-    category: "Commercial",
-    type: "Old Designs",
-    inspiration:
-      "Inspired by Japanese minimalism and the principles of biophilic design for well-being.",
-    comments: [
-      {
-        author: "Employee",
-        text: "Our office feels so much more productive and calm now.",
-        rating: 5,
-      },
-      {
-        author: "Business Owner",
-        text: "A fantastic investment in our team's environment.",
-        rating: 5,
-      },
-    ],
-  },
-  {
-    slug: "rustic-farmhouse-kitchen",
-    title: "Rustic Farmhouse Kitchen",
-    description:
-      "Blending traditional charm with modern amenities for a family-friendly kitchen.",
-    image: "/pexels-zvolskiy-2062426.jpg?height=400&width=600",
-    category: "Residential",
-    type: "New Designs",
-    inspiration:
-      "Rooted in traditional American farmhouse aesthetics with a touch of modern industrialism.",
-    comments: [
-      {
-        author: "Client C",
-        text: "The kitchen is the heart of our home, and DecorCo made it perfect!",
-        rating: 5,
-      },
-      {
-        author: "Food Blogger",
-        text: "Dream kitchen for cooking and entertaining!",
-        rating: 5,
-      },
-    ],
-  },
-  {
-    slug: "luxury-retail-store",
-    title: "Luxury Retail Store",
-    description:
-      "Designing an immersive shopping experience that reflects brand elegance.",
-    image: "/pexels-heyho-13068364.jpg?height=400&width=600",
-    category: "Commercial",
-    type: "Old Designs",
-    inspiration:
-      "Inspired by high-end fashion houses and art galleries, focusing on product presentation.",
-    comments: [
-      {
-        author: "Store Owner",
-        text: "Our sales have increased thanks to the inviting atmosphere.",
-        rating: 5,
-      },
-      {
-        author: "Shopper",
-        text: "A truly luxurious shopping experience.",
-        rating: 4,
-      },
-    ],
-  },
-];
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState("all");
 
-  const filteredProjects = projectsData.filter((project) => {
+  const filteredProjects = projectsPageData.filter((project) => {
     if (activeTab === "all") return true;
     if (activeTab === "new") return project.type === "New Designs";
     if (activeTab === "old") return project.type === "Old Designs";
@@ -178,7 +37,7 @@ export default function ProjectsPage() {
         />
         <div className="relative z-20 text-center px-6">
           <ScrollReveal delay={0.2}>
-            <h1 className="text-[10rem] font-wegato font-thin  text-white">
+            <h1 className="text-[6rem] leading-[6rem] md:text-[10rem] md:leading-[10rem] font-wegato font-thin  text-white mb-4">
               Our <span className="font-medium">Portfolio</span>
             </h1>
             <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
@@ -200,7 +59,7 @@ export default function ProjectsPage() {
               className="w-full"
               onValueChange={setActiveTab}
             >
-              <TabsList className="flex flex-wrap justify-center gap-2 bg-transparent">
+              <TabsList className="flex flex-wrap justify-center gap-2 bg-transparent h-fit">
                 {[
                   { value: "all", label: "All Projects" },
                   { value: "new", label: "New Designs" },
@@ -220,7 +79,9 @@ export default function ProjectsPage() {
             </Tabs>
           </div>
         </ScrollReveal>
-
+        <p className=" text-gray-600 mb-8">
+          NOTE: Hover or Click on the porject image to view the project details
+        </p>
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
@@ -230,7 +91,7 @@ export default function ProjectsPage() {
               yOffset={50}
             >
               <div className="group relative overflow-hidden">
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <div className="relative aspect-[4/3] w-full overflow-hidden min-h-[30rem]">
                   <Image
                     src={project.image}
                     alt={project.title}

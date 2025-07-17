@@ -432,7 +432,7 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
       }}
     >
       {/* Slider Container */}
-      <div className="overflow-hidden px-4">
+      <div className="overflow-hidden">
         <div
           ref={sliderRef}
           className="flex overflow-x-hidden py-6 will-change-scroll"

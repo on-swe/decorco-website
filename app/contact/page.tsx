@@ -43,12 +43,12 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#1a1a1a]">
       {/* Header */}
-      <section className="relative bg-[#1a1a1a] min-h-[60vh] items-center justify-center flex">
+      <section className="relative bg-[#1a1a1a] min-h-[60vh] items-center justify-center flex overflow-x-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
 
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-[10rem] font-wegato font-thin text-white">
+            <h1 className="text-[6rem] leading-[7rem] md:text-[10rem] md:leading-[10rem] font-wegato font-thin text-white">
               Contact Us
             </h1>
             <p className="text-xl text-[#cbd5e1] max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white border border-gray-200 p-8">
-              <h2 className="text-[4rem] font-thin font-wegato mb-6">Send us a Message</h2>
+              <h2 className="leading-[4rem] text-[4rem] font-thin font-wegato mb-6">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>

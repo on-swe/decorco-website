@@ -40,10 +40,19 @@ export function ReachOutSection() {
     },
   ];
   return (
-    <section className="bg-accent-light py-16 md:py-24 text-text-dark relative overflow-hidden">
+    <section className="bg-accent-light py-16 md:py-24 text-text-dark relative overflow-x-hidden">
       <div className="max-w-7xl px-8">
         <ScrollReveal delay={0.2}>
-          <h2 className="text-[5rem] leading-[5rem] font-wegato mb-12">
+          <h2
+            className="font-wegato 
+               text-[2rem] leading-[2rem] mb-6
+               xs:text-[2.5rem] xs:leading-[2.5rem]
+               sm:text-[3rem] sm:leading-[3rem] sm:mb-8
+               md:text-[3.5rem] md:leading-[3.5rem] md:mb-9
+               lg:text-[4rem] lg:leading-[4rem] lg:mb-10
+               xl:text-[4.5rem] xl:leading-[4.5rem] xl:mb-11
+               2xl:text-[5rem] 2xl:leading-[5rem] 2xl:mb-12"
+          >
             FOR EVERYTHING YOUR HOME DESERVES, REACH OUT TO US AT
           </h2>
         </ScrollReveal>

@@ -55,15 +55,15 @@ export function WeAreIndexSection() {
   }, [currentIndex]);
 
   return (
-    <section className="pb-[12rem] pt-[6rem] px-[2rem] bg-primary-dark text-text-light">
+    <section className="pb-[12rem] pt-[6rem] px-[2rem] bg-primary-dark text-text-light overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between mb-12">
-          <ScrollReveal delay={0.2} xOffset={-50}>
-            <h2 className="text-[5rem] font-wegato">We Are</h2>
+        <ScrollReveal delay={0.2} xOffset={-50}>
+            <h2 className=" leading-[3.5rem] text-[5rem] md:leading-[6rem] font-wegato">We Are</h2>
           </ScrollReveal>
           <div className="flex-grow border-t border-gray-700 mx-8 hidden md:block" />
           <ScrollReveal delay={0.4} xOffset={50}>
-            <h2 className="text-[5rem] font-wegato">Index</h2>
+            <h2 className=" leading-[3.5rem] text-[5rem] md:leading-[6rem] font-wegato">Index</h2>
           </ScrollReveal>
         </div>
 

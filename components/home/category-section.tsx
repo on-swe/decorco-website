@@ -11,7 +11,10 @@ export function CategorySection() {
       <ScrollVelocity
         texts={[". Furniture / Interior / Design "]}
         velocity={velocity}
-        className="custom-scroll-text font-wegato text-[#1a1a1a] font-thin text-[7rem] py-12"
+        className="custom-scroll-text font-wegato text-[#1a1a1a] font-thin
+            text-[3.5rem] sm:text-[4.5rem] 
+            md:text-[5.5rem] lg:text-[6rem] xl:text-[7rem]
+            py-6 sm:py-8 md:py-10 lg:py-12"
       />
     </section>
   );
